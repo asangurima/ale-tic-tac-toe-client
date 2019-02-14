@@ -12,18 +12,32 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <header>
-        <h1>Tic Tac Toe</h1>
-        <p>This is where my login form will go.</p>
-        <p>This is where the sign in button will go.</p>
+      <section class="container-fluid">
+        <header class="row">
+          <div class="col-3">
+            <p>This is where my login form will go.</p>
+          </div>
+          <div class= "col-6">
+            <h1>Tic Tac Toe</h1>
+          </div>
+          <div class="col-3">
+            <p>This is where the sign up button will go.</p>
+          </div>
       </header>
-      <main>
-        <section>User messages</section>
-        <section>game board</section>
-        <section>start button</section>
-        <section>player 1 dash</section>
-        <section>player 2 dash</section>
+    </section>
+      <main class="container">
+        <section class= "col-12">User messages will display here.</section>
+        <section class= "col-12">game board</section>
+        <section class= "col-12">start button</section>
+        <div id="dash" class="row">
+          <section class= "col-6">player 1 dash</section>
+          <section class= "col-6">player 2 dash</section>
+        </div>
       </main>
-      <footer></footer>
+      <footer class="row">
+        <section class="col-4">About Me</section>
+        <section class="col-4">Options</section>
+        <section class="col-4">Help/Rules</section>
+      </footer>
     </body>
 </html>
