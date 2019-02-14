@@ -1,0 +1,31 @@
+$game-board-max-width: 500px;
+
+header {
+  background-color: $stormy-blue-color;
+    h1 {
+      text-align: center;
+    }
+}
+
+main {
+  // whats up with the weird margins in main?
+  // background-color: $sky-blue-color;
+  text-align: center;
+  .game-board {
+    margin: auto;
+    width: $game-board-max-width;
+    max-width: $game-board-max-width;
+    height: $game-board-max-width;
+    max-height: $game-board-max-width;
+      td {
+        background-color: $jay-blue-color;
+        width: auto;
+        height: auto;
+      }
+  }
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+}
