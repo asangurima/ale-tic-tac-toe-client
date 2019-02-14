@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+header {
+  background-color: gray;
+    h1 {
+      text-align: center;
+    }
+}
+
+main {
+  text-align: center;
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+}
