@@ -1,6 +1,11 @@
 $game-board-max-width: 500px;
 
-header {
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+nav {
   background-color: $misty-ocean-color;
     h1 {
       text-align: center;
