@@ -7,5 +7,5 @@ const events = require('./events.js')
 // require('./example')
 
 $(() => {
-  $('td').on('click', events.onMakeMove)
+  $('.cell').on('click', events.onMakeMove)
 })
