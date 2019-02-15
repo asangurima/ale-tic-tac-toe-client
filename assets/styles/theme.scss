@@ -1,7 +1,7 @@
 $game-board-max-width: 500px;
 
 header {
-  background-color: $stormy-blue-color;
+  background-color: $misty-ocean-color;
     h1 {
       text-align: center;
     }
@@ -18,9 +18,9 @@ main {
     height: $game-board-max-width;
     max-height: $game-board-max-width;
       td {
-        background-color: $jay-blue-color;
-        width: auto;
-        height: auto;
+        background-color: $caribbean-sea-color;
+        width: $game-board-max-width/ 3;
+        height: $game-board-max-width/ 3;
       }
   }
 }
