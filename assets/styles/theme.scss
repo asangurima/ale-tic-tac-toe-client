@@ -1,0 +1,54 @@
+$game-board-max-width: 33vw;
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: $caribbean-sea-color;
+    h1 {
+      text-align: center;
+    }
+}
+
+main {
+  // whats up with the weird margins in main?
+  // background-color: $sky-blue-color;
+  text-align: center;
+  .game-board {
+    margin: auto;
+    width: $game-board-max-width;
+    // max-width: $game-board-max-width;
+    height: $game-board-max-width;
+    // max-height: $game-board-max-width;
+    // background-image: url()
+      .cell {
+        // background-color: $caribbean-sea-color;
+        width: $game-board-max-width/ 3;
+        height: $game-board-max-width/ 3;
+        border: 1px solid $misty-ocean-color;
+        font-size: 10vh;
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+      }
+      .noTop {
+        border-top: 0;
+      }
+      .noBot{
+        border-bottom: 0;
+      }
+      .noLeft{
+        border-left: 0;
+      }
+      .noRight{
+        border-right: 0;
+      }
+    }
+}
+
+footer {
+  background-color: gray;
+  text-align: center;
+}

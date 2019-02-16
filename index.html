@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Ale's Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,8 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <section class="container-fluid">
-        <header class="row">
+      <nav class="navbar navbar-light">
           <div class="col-3">
             <p>This is where my login form will go.</p>
           </div>
@@ -23,12 +22,28 @@
           <div class="col-3">
             <p>This is where the sign up button will go.</p>
           </div>
-      </header>
-    </section>
+      </nav>
       <main class="container">
         <section class= "col-12">User messages will display here.</section>
-        <section class= "col-12">game board</section>
-        <section class= "col-12">start button</section>
+        <div class="game-board my-4">
+          <!-- Should hide game board until user logs in -->
+            <div class="row">
+              <div class="cell col-4 noTop noLeft" data-index="0"></div>
+              <div class="cell col-4 noTop" data-index="1"></div>
+              <div class="cell col-4 noTop noRight" data-index="2"></div>
+            </div>
+            <div class="row">
+              <div class="cell col-4 noLeft" data-index="3"></div>
+              <div class="cell col-4" data-index="4"></div>
+              <div class="cell col-4 noRight" data-index="5"></div>
+            </div>
+            <div class="row">
+              <div class="cell col-4 noBot noLeft" data-index="6"></div>
+              <div class="cell col-4 noBot" data-index="7"></div>
+              <div class="cell col-4 noBot noRight" data-index="8"></div>
+            </div>
+        </div>
+        <button id="resetGame" type="button" class= "btn">Reset Game</button>
         <div id="dash" class="row">
           <section class= "col-6">player 1 dash</section>
           <section class= "col-6">player 2 dash</section>
