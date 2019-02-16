@@ -8,4 +8,5 @@ const events = require('./events.js')
 
 $(() => {
   $('.cell').on('click', events.onMakeMove)
+  $('#resetGame').on('click', events.onResetGame)
 })

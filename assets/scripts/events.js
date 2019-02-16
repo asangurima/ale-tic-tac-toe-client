@@ -1,7 +1,7 @@
 
 let currentPlayer = 'X'
 // my javascript game board for gamelogic:
-// let jsBoard = ['', '', '', '', '', '', '', '', '']
+let jsBoard = ['', '', '', '', '', '', '', '', '']
 
 const onMakeMove = (event) => {
   event.preventDefault()
@@ -14,23 +14,37 @@ const onMakeMove = (event) => {
   const changePlayer = () => {
     if (currentPlayer === 'X') {
       $(event.target).html('X')
+      // push current player value to index in array correspondsing to the data
+      // value of the cell (before switching players)
       currentPlayer = 'O'
+      // tell the user who the current player is!
     } else {
       $(event.target).html('O')
+      // push current player value to index in array correspondsing to the data
+      // value of the cell (before switching players)
       currentPlayer = 'X'
+      // tell the user who the current player is!
     }
   }
 
-  if ($(event.target).text() === '') {
+  if ($(event.target).html() === '') {
     changePlayer()
+    // need to figure out a way to store the currentPlayer in store file?
+    // want to push the cellIndexValue to the jsBoard array
+    // it will correspond to the index # in the JS game board array
   }
-  // when clicked, if the cell is blank, add a mark (x), if there is a mark already,
-  // then leave the mark there.
+}
 
-  // also need to save the cellIndexValue
-  // it will correspond to the index # in the JS game board array
+// // reset button:
+const onResetGame = (event) => {
+  event.preventDefault()
+  // clear cells
+  $('.cell').html('')
+  // clear JS gameboard
+  jsBoard = ['', '', '', '', '', '', '', '', '']
 }
 
 module.exports = {
   onMakeMove,
+  onResetGame
 }
