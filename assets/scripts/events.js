@@ -45,6 +45,7 @@ const checkForWinner = () => {
   // need to stop the game in this function once a winner is declared!!
   } else if (notEmpty(jsBoard)) {
     $('.userMessages').html(`It's a draw!`)
+    gameOver()
   }
 }
 
