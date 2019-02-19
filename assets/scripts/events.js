@@ -48,10 +48,12 @@ const checkForWinner = () => {
   }
 }
 
+// turns off click functionality on cells
 const gameOver = () => {
   $('.cell').off('click', onMakeMove)
 }
 
+// function to check if all spaces are taken
 const notEmpty = (arr) => {
   const isNotEmptyString = (value) => {
     return value !== ''
@@ -59,6 +61,7 @@ const notEmpty = (arr) => {
   return arr.every(isNotEmptyString)
 }
 
+// my main function:
 const onMakeMove = (event) => {
   event.preventDefault()
 
