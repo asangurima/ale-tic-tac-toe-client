@@ -1,8 +1,11 @@
 $game-board-max-width: 33vw;
 
+// why are things going so wacky on mobile??
+
 html {
   max-width: 100%;
   overflow-x: hidden;
+  max-height: 100%
 }
 
 nav {
@@ -16,6 +19,10 @@ main {
   // whats up with the weird margins in main?
   // background-color: $sky-blue-color;
   text-align: center;
+  .userMessages {
+    font-size: 3em;
+    // font-weight: bold;
+  }
   .game-board {
     margin: auto;
     width: $game-board-max-width;
@@ -31,7 +38,7 @@ main {
         font-size: 10vh;
         justify-content: center;
         align-items: center;
-        padding: 10%;
+        margin: auto;
       }
       .noTop {
         border-top: 0;
