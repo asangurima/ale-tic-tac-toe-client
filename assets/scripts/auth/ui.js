@@ -23,10 +23,16 @@ const signInSuccess = (responseData) => {
   }, 3000)
   // this should make the sign out button display on succesful sign-in
   $('#sign-out-form').removeClass('d-none')
-  $('.game-board').removeClass('d-none')
   $('#resetGame').removeClass('d-none')
+  $('#number-of-games').removeClass('d-none')
+  // $('.userMessages').html('x starts the game!')
+  $('.userMessages').html('')
+  const revealBoard = () => {
+    $('.game-board').removeClass('d-none')
+    $('.userMessages').html('x starts the game!')
+  }
+  $('#resetGame').on('click', revealBoard)
   $('#change-pw-button').removeClass('d-none')
-  $('.userMessages').html('x starts the game!')
   // this should make the sign in form disappear on succesful sign-in
   $('#sign-in-form').addClass('d-none')
   $('#signUpButton').addClass('d-none')
@@ -61,6 +67,7 @@ const changePasswordFailure = () => {
 const signOutSuccess = () => {
   $('.auth-messages').text('Successfully signed out.')
   $('form').trigger('reset')
+  $('#number-of-games').addClass('d-none')
   $('.game-board').addClass('d-none')
   $('#resetGame').addClass('d-none')
   $('#change-pw-button').addClass('d-none')
