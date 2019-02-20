@@ -8,28 +8,23 @@ const onSignUp = (event) => {
   event.preventDefault()
 
   const form = event.target
-  console.log('form:', form)
+  // console.log('form:', form)
 
   const formData = getFormFields(form)
-  console.log('formData:', formData)
+  // console.log('formData:', formData)
   // console.log('config:', congif.apiUrl)
-
+  // user messages to print based on success or failure:
   api.signUp(formData)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
 
-// Check these below:
 const onSignIn = (event) => {
   event.preventDefault()
 
   const form = event.target
-  console.log('form:', form)
 
   const formData = getFormFields(form)
-  console.log('formData:', formData)
-  // console.log('config:', congif.apiUrl)
-  // user messages to print based on success or failure
   api.signIn(formData)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -39,12 +34,8 @@ const onChangePassword = (event) => {
   event.preventDefault()
 
   const form = event.target
-  console.log('form:', form)
 
   const formData = getFormFields(form)
-  console.log('formData:', formData)
-  // console.log('config:', congif.apiUrl)
-  // user messages to print based on success or failure
   api.changePassword(formData)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -52,8 +43,7 @@ const onChangePassword = (event) => {
 
 const onSignOut = (event) => {
   event.preventDefault()
-  // console.log('config:', congif.apiUrl)
-  // user messages to print based on success or failure
+
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)

@@ -11,8 +11,6 @@ const signUp = (formData) => {
   })
 }
 
-// Check these below:
-
 const signIn = (formData) => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
@@ -22,7 +20,7 @@ const signIn = (formData) => {
 }
 
 const changePassword = (formData) => {
-  console.log('store:', store)
+  // console.log('store:', store)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -34,7 +32,7 @@ const changePassword = (formData) => {
 }
 
 const signOut = (formData) => {
-  console.log('store:', store)
+  // console.log('store:', store)
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
