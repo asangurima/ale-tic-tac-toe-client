@@ -1,6 +1,6 @@
 
 let currentPlayer = 'x'
-$('.userMessages').html('x starts the game!')
+// $('.userMessages').html('x starts the game!')
 // my javascript game board for gamelogic:
 let jsBoard = ['', '', '', '', '', '', '', '', '']
 
