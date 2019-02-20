@@ -3,6 +3,7 @@ const store = require('../store.js')
 
 const signUpSuccess = () => {
   $('.auth-messages-2').text('Successfully signed up!')
+  $('form').trigger('reset')
   setTimeout(() => {
     $('.auth-messages-2').html('')
   }, 3000)
