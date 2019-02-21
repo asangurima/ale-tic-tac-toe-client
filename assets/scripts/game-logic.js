@@ -75,10 +75,10 @@ const onMakeMove = (event) => {
 
   const isValidMove = () => {
     if ($(event.target).html() !== '') {
-      $('.userMessages').html(`Not a valid move.`)
+      $('.userMessages2').html(`Not a valid move.`)
 
       setTimeout(() => {
-        $('.userMessages').html(`It's ${store.currentPlayer}'s turn!`)
+        $('.userMessages2').html('')
       }, 1000)
     }
   }

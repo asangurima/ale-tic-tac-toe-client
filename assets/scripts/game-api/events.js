@@ -33,6 +33,11 @@ const addHandlers = () => {
     if (!store.game.over) {
       gameLogic.onMakeMove(event)
       onUpdateGame(event)
+    } else if (store.game.over) {
+      $('.userMessages2').text('Please start a new game to play again!')
+      setTimeout(() => {
+        $('.userMessages2').text('')
+      }, 3000)
     }
   })
 
