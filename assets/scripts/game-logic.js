@@ -70,7 +70,7 @@ const notEmpty = (arr) => {
 
 // my main function:
 const onMakeMove = (event) => {
-  console.log('onMakeMove')
+  // console.log('onMakeMove')
   event.preventDefault()
 
   const isValidMove = () => {
@@ -86,7 +86,7 @@ const onMakeMove = (event) => {
   isValidMove()
 
   store.cellIndexValue = $(event.target).data('index')
-  console.log('cellIndexValue:', store.cellIndexValue)
+  // console.log('cellIndexValue:', store.cellIndexValue)
 
   // make an x or o appear in cell when clicked; switch players:
   const changePlayer = () => {
@@ -107,7 +107,7 @@ const onMakeMove = (event) => {
       store.currentPlayer = 'x'
       // tell the user who the current player is!
     }
-    console.log('jsBoard:', jsBoard)
+    // console.log('jsBoard:', jsBoard)
     // console.log('all x or o', allXOrO(jsBoard))
   }
 
@@ -120,7 +120,7 @@ const onMakeMove = (event) => {
 // reset button:
 const onResetGame = (event) => {
   event.preventDefault()
-  console.log('resetGame is running', store.game.over)
+  // console.log('resetGame is running', store.game.over)
   // if (store.gameIsOver) {
   //   turnCellsOn()
   // }

@@ -29,7 +29,7 @@ const onGetGames = (event) => {
 
 const addHandlers = () => {
   $('.cell').on('click', () => {
-    console.log(store)
+    // console.log(store)
     if (!store.game.over) {
       gameLogic.onMakeMove(event)
       onUpdateGame(event)

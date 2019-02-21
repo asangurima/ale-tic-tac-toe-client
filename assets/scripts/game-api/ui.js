@@ -3,8 +3,8 @@
 const store = require('../store.js')
 
 const createGameSuccess = (responseData) => {
-  console.log('Successfully created game!')
-  console.log(responseData.game)
+  // console.log('Successfully created game!')
+  // console.log(responseData.game)
   store.game = responseData.game
   // setTimeout(() => {
   //   $('.??').html('')
@@ -12,20 +12,20 @@ const createGameSuccess = (responseData) => {
 }
 
 const createGameFailure = () => {
-  console.log('Create game went wrong. Please try again.')
+  // console.log('Create game went wrong. Please try again.')
 }
 
 const updateGameSuccess = () => {
-  console.log('Successfully updated game!')
+  // console.log('Successfully updated game!')
 }
 
 const updateGameFailure = () => {
-  console.log('Update went wrong. Please try again.')
+  // console.log('Update went wrong. Please try again.')
 }
 
 const getGamesSuccess = (responseData) => {
-  console.log('Successfully got games!')
-  console.log(responseData)
+  // console.log('Successfully got games!')
+  // console.log(responseData)
   store.games = responseData.games
   $('.auth-messages-2').html(`Total games played: ${store.games.length}`)
   setTimeout(() => {
